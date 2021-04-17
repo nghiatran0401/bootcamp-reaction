@@ -1,10 +1,10 @@
 import { NEW_MESSAGE } from './types';
-import uuid from 'uuid/v4';
+import { v4 } from 'uuid';
 
 export const newMessage = ({ message, username }) => ({
   type: NEW_MESSAGE,
   item: { 
-    id: uuid(), 
+    id: v4(), 
     timestamp: Date.now(), 
     message,
     username
