@@ -1,11 +1,11 @@
-import uuid from 'uuid/v4';
+import { v4 } from 'uuid';
 
 
 export const createReaction = (type, emoji, username, messageId) => {
   return {
     type,
     item: { 
-      id: uuid(), 
+      id: v4(), 
       timestamp: Date.now(), 
       emoji, 
       username, 
